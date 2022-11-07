@@ -1,32 +1,77 @@
+@font-face {
+	font-family: 'Cereal';
+	src: url(airbnb-cereal-font/AirbnbCereal_W_Md.otf);
+}
+
+@font-face {
+	font-family: 'Cereal Light';
+	src: url(airbnb-cereal-font/AirbnbCereal_W_Lt.otf);
+}
+
+
+@font-face {
+	font-family: 'Cereal Black';
+	src: url(airbnb-cereal-font/AirbnbCereal_W_Blk.otf);
+}
+
+
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-nav{
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    backdrop-filter: grayscale(90%);
-}
-
-nav img{
-    width: 25%;
-    margin-top: 10px;
+    font-family: 'Cereal';
 }
 
 .home{
     width: 100%;
-    height: 80vh;
-    background-image: url(images/coiffure.jpg);
     background-size: cover;
-    
+	background-color: black;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-h1{
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    color: white;
+.home video{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) scale(1.2);
+	filter : brightness(0.45) saturate(100%);
+	object-fit: cover;
+	display: flex;
+}
+
+.title{
+	position: relative;
+	height: 100vh;
+	overflow-y: hidden;
+	z-index: 2;
+	width: 100vw;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title img{
+	width: 25%;
+	margin-bottom: 2vw;
+}
+
+.title h1{
+	font-size: 2vw;
+	font-family: 'Cereal Light';
+	margin-top: 2vw;
+
+}
+
+@media screen and (max-width: 1000px){
+	.home video{
+		transform : translateX(-40%) scale(1);
+	}
 }
